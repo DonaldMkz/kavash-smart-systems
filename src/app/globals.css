@@ -1,0 +1,199 @@
+@import "tailwindcss";
+
+/* ============================================
+   KAVASH SMART SYSTEMS - GLOBAL STYLES
+   ============================================ */
+
+/* Define brand colors and theme */
+@theme {
+  /* Brand Colors */
+  --color-deep-blue: #204860;
+  --color-deep-blue-light: #2A5F7A;
+  --color-deep-blue-dark: #152E3F;
+  --color-charcoal-gray: #384048;
+  --color-charcoal-gray-light: #5A6A78;
+  --color-off-white: #F5F5F3;
+  --color-off-white-dark: #E8E6E3;
+  
+  /* Font Family */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  
+  /* Custom Animations */
+  --animate-fade-in: fade-in 0.5s ease-in-out;
+  --animate-fade-in-up: fade-in-up 0.5s ease-in-out;
+  --animate-slide-in: slide-in 0.3s ease-in-out;
+  
+  /* Keyframes */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F5F5F3;
+  color: #384048;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: #204860;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  color: #5A6A78;
+}
+
+/* Links */
+a {
+  color: #204860;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2A5F7A;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Section padding */
+.section-padding {
+  padding: 4rem 0;
+}
+
+/* Gradient background */
+.gradient-bg {
+  background: linear-gradient(135deg, #204860 0%, #2A5F7A 50%, #152E3F 100%);
+}
+
+/* Card styles */
+.card {
+  background: #FFFFFF;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #204860;
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: #2A5F7A;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(32, 72, 96, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #204860;
+  border: 2px solid #204860;
+}
+
+.btn-secondary:hover {
+  background-color: #204860;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  background-color: #FFFFFF;
+  color: #204860;
+}
+
+.btn-white:hover {
+  background-color: #F5F5F3;
+  color: #204860;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #204860 0%, #2A5F7A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
