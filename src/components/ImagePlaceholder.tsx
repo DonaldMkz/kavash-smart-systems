@@ -8,7 +8,7 @@ const ImagePlaceholder = ({
   className = "" 
 }: ImagePlaceholderProps) => {
   return (
-    <div className={`relative overflow-hidden bg-gradient-to-br from-deep-blue to-deep-blue-dark flex items-center justify-center ${className}`}>
+    <div className={`relative overflow-hidden bg-linear-to-br from-deep-blue to-deep-blue-dark flex items-center justify-center ${className}`}>
       {/* Decorative pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full" style={{

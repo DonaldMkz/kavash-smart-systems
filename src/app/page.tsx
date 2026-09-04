@@ -10,7 +10,6 @@ import {
   Key,
   HardHat,
   ArrowRight,
-  CheckCircle,
   Shield,
   Clock,
   Wrench,
@@ -107,7 +106,7 @@ export default function HomePage() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-white/5 rounded-full animate-pulse" />
         <div className="absolute top-40 right-40 w-32 h-32 bg-white/10 rounded-full animate-pulse" />
 
-        <div className="container mx-auto px-4 relative z-10 py-32">
+        <div className="container mx-auto px-6 md:px-8 relative z-10 py-32 md:py-40">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -118,9 +117,9 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
+              className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-2.5 mb-8"
             >
-              <span className="text-white text-sm font-medium">
+              <span className="text-white text-sm font-medium tracking-wide">
                 Technology Integration Experts
               </span>
             </motion.div>
@@ -129,13 +128,13 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight"
             >
               Smart Technology.
               <br />
               Connected Systems.
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-white to-gray-300">
                 Better Control.
               </span>
             </motion.h1>
@@ -144,7 +143,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl"
+              className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl leading-relaxed"
             >
               Kavash Smart Systems designs, supplies, installs, and supports smart automation,
               security, fleet technology, communication, and access control solutions for
@@ -155,15 +154,15 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-5"
             >
-              <Link href="/services" className="btn btn-white text-lg">
+              <Link href="/services" className="btn btn-white text-lg px-8 py-3.5">
                 Explore Services
                 <ArrowRight className="inline ml-2" size={20} />
               </Link>
               <Link
                 href="/contact"
-                className="btn bg-transparent border-2 border-white text-white hover:bg-white hover:text-deep-blue text-lg"
+                className="btn bg-transparent border-2 border-white text-white hover:bg-white hover:text-deep-blue text-lg px-8 py-3.5"
               >
                 Get a Quote
               </Link>
@@ -173,49 +172,51 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES SECTION */}
-      <section className="section-padding bg-off-white">
-        <div className="container mx-auto px-4">
+      <section className="py-24 md:py-32 bg-off-white">
+        <div className="container mx-auto px-6 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <p className="text-deep-blue font-semibold mb-2">OUR SERVICES</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-deep-blue mb-4">
+            <p className="text-deep-blue font-semibold mb-3 tracking-wider text-sm">OUR SERVICES</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-deep-blue mb-6">
               Complete Technology Solutions
             </h2>
-            <p className="text-charcoal-gray-light max-w-2xl mx-auto">
+            <p className="text-charcoal-gray-light max-w-2xl mx-auto text-lg leading-relaxed">
               We provide integrated technology solutions that connect different systems
               seamlessly for better control and efficiency.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="card p-6 group cursor-pointer hover:border-deep-blue border-2 border-transparent"
+                className="h-full"
               >
-                <div className={`${service.color} w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <service.icon size={28} className="text-white" />
+                <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-lg transition-shadow h-full flex flex-col cursor-pointer hover:border-deep-blue border-2 border-transparent">
+                  <div className={`${service.color} w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+                    <service.icon size={32} className="text-white" />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-deep-blue mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-charcoal-gray-light mb-6 flex-grow leading-relaxed">
+                    {service.description}
+                  </p>
+                  <Link
+                    href={service.href}
+                    className="inline-flex items-center text-deep-blue font-semibold hover:text-deep-blue-light transition-colors mt-auto"
+                  >
+                    Learn More
+                    <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
-                <h3 className="text-xl font-bold text-deep-blue mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-charcoal-gray-light mb-4">
-                  {service.description}
-                </p>
-                <Link
-                  href={service.href}
-                  className="inline-flex items-center text-deep-blue font-semibold hover:text-deep-blue-light transition-colors"
-                >
-                  Learn More
-                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
               </motion.div>
             ))}
           </div>
@@ -223,40 +224,42 @@ export default function HomePage() {
       </section>
 
       {/* WHY KAVASH SECTION */}
-      <section className="section-padding bg-off-white-dark">
-        <div className="container mx-auto px-4">
+      <section className="py-24 md:py-32 bg-off-white-dark">
+        <div className="container mx-auto px-6 md:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <p className="text-deep-blue font-semibold mb-2">WHY CHOOSE KAVASH</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-deep-blue mb-4">
+            <p className="text-deep-blue font-semibold mb-3 tracking-wider text-sm">WHY CHOOSE KAVASH</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-deep-blue mb-6">
               Why We're Different
             </h2>
-            <p className="text-charcoal-gray-light max-w-2xl mx-auto">
+            <p className="text-charcoal-gray-light max-w-2xl mx-auto text-lg leading-relaxed">
               We're not just installers - we're technology integration experts who
               connect systems for seamless control.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {whyKavash.map((item, index) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-shadow"
+                className="h-full"
               >
-                <div className="flex items-center mb-4">
-                  <div className="bg-deep-blue/10 w-12 h-12 rounded-lg flex items-center justify-center mr-3">
-                    <item.icon size={24} className="text-deep-blue" />
+                <div className="bg-white p-10 rounded-xl shadow-sm hover:shadow-lg transition-shadow h-full flex flex-col">
+                  <div className="flex items-start mb-5">
+                    <div className="bg-deep-blue/10 w-14 h-14 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                      <item.icon size={28} className="text-deep-blue" />
+                    </div>
+                    <h3 className="text-lg md:text-xl font-bold text-deep-blue pt-3">{item.title}</h3>
                   </div>
-                  <h3 className="text-lg font-bold text-deep-blue">{item.title}</h3>
+                  <p className="text-charcoal-gray-light leading-relaxed">{item.description}</p>
                 </div>
-                <p className="text-charcoal-gray-light">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -264,27 +267,27 @@ export default function HomePage() {
       </section>
 
       {/* CALL TO ACTION SECTION */}
-      <section className="gradient-bg py-20">
-        <div className="container mx-auto px-4 text-center">
+      <section className="gradient-bg py-24 md:py-32">
+        <div className="container mx-auto px-6 md:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Property with Smart Technology?
             </h2>
-            <p className="text-gray-200 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed">
               Let's discuss how our integrated solutions can enhance security, efficiency,
               and control for your home or business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn btn-white text-lg">
+            <div className="flex flex-col sm:flex-row gap-5 justify-center">
+              <Link href="/contact" className="btn btn-white text-lg px-8 py-3.5">
                 Get a Consultation
               </Link>
               <Link
                 href="/portfolio"
-                className="btn bg-transparent border-2 border-white text-white hover:bg-white hover:text-deep-blue text-lg"
+                className="btn bg-transparent border-2 border-white text-white hover:bg-white hover:text-deep-blue text-lg px-8 py-3.5"
               >
                 View Our Work
               </Link>
