@@ -14,37 +14,37 @@ import {
 export default function HomePage() {
   const services = [
     {
-      image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/smart-home.webp",
       title: "Smart Home Automation",
       description: "Custom smart home solutions for lighting, security, access, entertainment, and appliances.",
       href: "/services/smart-home",
     },
     {
-      image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/fleet-management.webp",
       title: "Vehicle Technology & Fleet Management",
       description: "GPS tracking and fleet management for businesses with vehicles.",
       href: "/services/fleet-management",
     },
     {
-      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/video-surveillance.webp",
       title: "Video Surveillance & Security",
       description: "Surveillance systems for homes, businesses, and industrial sites.",
       href: "/services/security",
     },
     {
-      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/VOIP.webp",
       title: "VOIP & Business Communication",
       description: "Professional phone systems for businesses and organizations.",
       href: "/services/voip",
     },
     {
-      image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/access-control.webp",
       title: "Automation & Access Control",
       description: "Systems that control who enters properties and restricted areas.",
       href: "/services/access-control",
     },
     {
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/mining-industries.webp",
       title: "Mining & Industrial Solutions",
       description: "Integrated technology for mining and industrial operations.",
       href: "/services/mining",

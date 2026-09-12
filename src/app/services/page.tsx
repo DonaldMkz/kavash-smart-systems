@@ -28,7 +28,7 @@ export default function ServicesPage() {
 
   const services = [
     {
-      image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/smart-home.webp",
       title: "Smart Home Automation",
       description: "Custom smart home solutions for lighting, security, access, entertainment, and appliances. Includes smart lighting, switches, plugs, locks, video doorbells, smart curtains, sensors, automated gates, climate control, and appliance control.",
       href: "/services/smart-home",
@@ -41,7 +41,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/fleet-management.webp",
       title: "Vehicle Technology & Fleet Management",
       description: "GPS tracking and fleet management for businesses with vehicles. Real-time tracking, trip history, geofencing, speed monitoring, and driver behavior monitoring.",
       href: "/services/fleet-management",
@@ -54,7 +54,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/video-surveillance.webp",
       title: "Video Surveillance & Security",
       description: "Surveillance systems for homes, businesses, and industrial sites. IP CCTV cameras, HD cameras, night vision, PTZ cameras, and remote viewing.",
       href: "/services/security",
@@ -67,7 +67,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/VOIP.webp",
       title: "VOIP & Business Communication",
       description: "Professional phone systems for businesses and organizations. IP phone systems, internal extensions, call routing, and conference calling.",
       href: "/services/voip",
@@ -80,7 +80,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      image: "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/access-control.webp",
       title: "Automation & Access Control",
       description: "Systems that control who enters properties, buildings, and restricted areas. Fingerprint systems, facial recognition, RFID cards, and smart locks.",
       href: "/services/access-control",
@@ -93,7 +93,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=800&auto=format&fit=crop",
+      image: "/images/services/mining-industries.webp",
       title: "Mining & Industrial Solutions",
       description: "Integrated technology for mining and industrial operations. Site security, access control, fleet management, and communication systems.",
       href: "/services/mining",
@@ -167,7 +167,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* SERVICES SECTION - Alternating image sides */}
+      {/* SERVICES SECTION - Alternating image sides with fixed height */}
       <section className="relative z-20 py-24 md:py-32 bg-off-white overflow-hidden">
         <div className="container mx-auto px-6 md:px-8">
           <motion.div
@@ -206,8 +206,8 @@ export default function ServicesPage() {
                       isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
                     }`}
                   >
-                    {/* Image Section */}
-                    <div className="relative lg:w-2/5 h-64 lg:h-auto overflow-hidden">
+                    {/* Image Section - Fixed Height */}
+                    <div className="relative lg:w-2/5 h-64 lg:h-[380px] overflow-hidden">
                       <img 
                         src={service.image} 
                         alt={service.title}
@@ -226,8 +226,8 @@ export default function ServicesPage() {
                       </span>
                     </div>
 
-                    {/* Content Section */}
-                    <div className="lg:w-3/5 p-8 md:p-12 flex flex-col justify-center">
+                    {/* Content Section - Fixed Height */}
+                    <div className="lg:w-3/5 p-8 md:p-12 flex flex-col justify-center lg:h-[380px]">
                       <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 transition-colors duration-300">
                         {service.title}
                       </h3>
