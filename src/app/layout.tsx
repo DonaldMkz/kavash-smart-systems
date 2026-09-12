@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -13,6 +13,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Kavash Smart Systems | Smart Technology. Connected Systems. Better Control.",
   description: "Kavash Smart Systems is a technology integration company specializing in smart home automation, security, fleet management, VOIP, access control, and mining solutions in Harare, Zimbabwe.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
