@@ -14,37 +14,37 @@ import {
 export default function HomePage() {
   const services = [
     {
-      image: "/images/services/smart-home.webp",
+      image: "/images/services/optimized/smart-home.webp",
       title: "Smart Home Automation",
       description: "Custom smart home solutions for lighting, security, access, entertainment, and appliances.",
       href: "/services/smart-home",
     },
     {
-      image: "/images/services/fleet-management.webp",
+      image: "/images/services/optimized/fleet-management.webp",
       title: "Vehicle Technology & Fleet Management",
       description: "GPS tracking and fleet management for businesses with vehicles.",
       href: "/services/fleet-management",
     },
     {
-      image: "/images/services/video-surveillance.webp",
+      image: "/images/services/optimized/video-surveillance.webp",
       title: "Video Surveillance & Security",
       description: "Surveillance systems for homes, businesses, and industrial sites.",
       href: "/services/security",
     },
     {
-      image: "/images/services/VOIP.webp",
+      image: "/images/services/optimized/VOIP.webp",
       title: "VOIP & Business Communication",
       description: "Professional phone systems for businesses and organizations.",
       href: "/services/voip",
     },
     {
-      image: "/images/services/access-control.webp",
+      image: "/images/services/optimized/access-control.webp",
       title: "Automation & Access Control",
       description: "Systems that control who enters properties and restricted areas.",
       href: "/services/access-control",
     },
     {
-      image: "/images/services/mining-industries.webp",
+      image: "/images/services/optimized/mining-industries.webp",
       title: "Mining & Industrial Solutions",
       description: "Integrated technology for mining and industrial operations.",
       href: "/services/mining",

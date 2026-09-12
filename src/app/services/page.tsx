@@ -28,7 +28,7 @@ export default function ServicesPage() {
 
   const services = [
     {
-      image: "/images/services/smart-home.webp",
+      image: "/images/services/optimized/smart-home.webp",
       title: "Smart Home Automation",
       description: "Custom smart home solutions for lighting, security, access, entertainment, and appliances. Includes smart lighting, switches, plugs, locks, video doorbells, smart curtains, sensors, automated gates, climate control, and appliance control.",
       href: "/services/smart-home",
@@ -41,7 +41,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      image: "/images/services/fleet-management.webp",
+      image: "/images/services/optimized/fleet-management.webp",
       title: "Vehicle Technology & Fleet Management",
       description: "GPS tracking and fleet management for businesses with vehicles. Real-time tracking, trip history, geofencing, speed monitoring, and driver behavior monitoring.",
       href: "/services/fleet-management",
@@ -54,7 +54,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      image: "/images/services/video-surveillance.webp",
+      image: "/images/services/optimized/video-surveillance.webp",
       title: "Video Surveillance & Security",
       description: "Surveillance systems for homes, businesses, and industrial sites. IP CCTV cameras, HD cameras, night vision, PTZ cameras, and remote viewing.",
       href: "/services/security",
@@ -67,7 +67,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      image: "/images/services/VOIP.webp",
+      image: "/images/services/optimized/VOIP.webp",
       title: "VOIP & Business Communication",
       description: "Professional phone systems for businesses and organizations. IP phone systems, internal extensions, call routing, and conference calling.",
       href: "/services/voip",
@@ -80,7 +80,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      image: "/images/services/access-control.webp",
+      image: "/images/services/optimized/access-control.webp",
       title: "Automation & Access Control",
       description: "Systems that control who enters properties, buildings, and restricted areas. Fingerprint systems, facial recognition, RFID cards, and smart locks.",
       href: "/services/access-control",
@@ -93,7 +93,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      image: "/images/services/mining-industries.webp",
+      image: "/images/services/optimized/mining-industries.webp",
       title: "Mining & Industrial Solutions",
       description: "Integrated technology for mining and industrial operations. Site security, access control, fleet management, and communication systems.",
       href: "/services/mining",
@@ -110,7 +110,11 @@ export default function ServicesPage() {
   return (
     <>
       {/* HERO SECTION - Fixed Background with Parallax */}
-      <section className="relative min-h-screen overflow-hidden">
+      <section
+        className="relative min-h-screen overflow-hidden"
+        // Clip fixed descendants without changing their viewport-relative parallax.
+        style={{ clipPath: "inset(0)" }}
+      >
         {/* Fixed Background Image with Parallax Movement */}
         <div
           ref={bgRef}
@@ -194,11 +198,11 @@ export default function ServicesPage() {
               
               return (
                 <motion.div
-                  key={service.title}
-                  initial={{ opacity: 0, y: 50 }}
+                  initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+                  transition={{ duration: 0.6, delay: index * 0.08 }}
+                  key={service.title}
                 >
                   <Link
                     href={service.href}
