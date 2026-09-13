@@ -78,14 +78,10 @@ p {
 }
 
 /* Links */
+/* Links */
 a {
-  color: #204860;
   text-decoration: none;
   transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #2A5F7A;
 }
 
 /* Container */
